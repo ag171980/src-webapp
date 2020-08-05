@@ -1,0 +1,31 @@
+/*_____________________MEDIA QUERIES FROM FORM REGISTER/LOGIN____________________*/
+@mixin media425px{
+    .form{
+        width: 85%;
+    }
+}
+@mixin media768px{
+    .form{
+        width: 50%;
+    }
+}
+@mixin media1024px{
+    .form{
+        width: 40%;
+    }
+}
+
+@mixin MediaQueries{
+    @media (max-width: 1024px){
+        @include media1024px;
+      }
+      @media (max-width: 768px){
+      @include media768px;
+      }
+      @media(max-width: 425px){
+        @include media425px;
+      }
+}
+
+
+

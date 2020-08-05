@@ -1,0 +1,61 @@
+@import "coolors.scss";
+/*___FLEX____*/
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin box-design{
+    @include flex-column;
+    width: 30vw;
+    background:$backgroundForm;
+    filter: $filterForm;
+    border-radius: 20%;
+    border: $borderGreen;
+    margin: $centrado;
+}
+@mixin form-label-design{
+    .formulario {
+        padding: 6%;
+        .formulario__label {
+          color: $sombra;
+          font-size: 20px;
+          margin-top: -80px;
+          z-index: 2;
+          padding-left: 15px;
+          position: absolute;
+          transition: 0.2s;
+        }
+        .formulario__input {
+          font-size: 20px;
+          padding: 20px;
+          margin-bottom: 40px;
+        }
+        .formulario__input:focus + .formulario__label {
+          margin-top: -120px;
+          color: $blanco;
+        }
+        .button {
+          background: linear-gradient(
+            to bottom,
+            rgba(25, 125, 10, 1) 0%,
+            rgba(73, 158, 58, 1) 51%,
+            rgba(67, 168, 57, 1) 60%,
+            rgba(61, 184, 65, 1) 71%,
+            rgba(96, 201, 91, 1) 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#197d0a', endColorstr='#60c95b', GradientType=0 );
+          color: white;
+        }
+        .fijar {
+          margin-top: -120px;
+          color: $blanco;
+        }
+      }
+}
